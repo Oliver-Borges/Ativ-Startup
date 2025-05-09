@@ -2,7 +2,6 @@ function enviar(){
     let nome = document.getElementById("nome").value;
     let email = document.getElementById("email").value;
     let mensagem = document.getElementById("mensagem").value;
-
     if(nome === "" || email === "" || mensagem === ""){
         alert("Para enviar é necessário que todos os campos estejam preenchidos.");
         event.preventDefault();
@@ -15,7 +14,6 @@ function enviar(){
         }
     }
 }
-// Script para fechar o menu mobile ao clicar em um link
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.querySelectorAll('.nav-links a');
@@ -62,23 +60,4 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.valor-card, .quadrado-servico').forEach(card => {
         observer.observe(card);
     });
-    
-    // Função de envio do formulário
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const nome = document.getElementById('nome').value;
-            const email = document.getElementById('email').value;
-            const mensagem = document.getElementById('mensagem').value;
-            
-            if (nome && email && mensagem) {
-                alert(`Obrigado ${nome}! Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.`);
-                contactForm.reset();
-            } else {
-                alert('Por favor, preencha todos os campos do formulário.');
-            }
-        });
-    }
 });
